@@ -380,7 +380,7 @@ main end
     flex-direction: column;
     position: relative;
   }
-  .nav{
+  #menu-icon{
     display: block;
     font-size: 2.5rem;
     margin: 1rem;
