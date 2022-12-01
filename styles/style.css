@@ -66,15 +66,16 @@ body{
   position: sticky;
   top: 0;
   z-index: 10;
-  min-height: 5vh;
+  min-height: auto;
 }
 #menu-icon{
   display: none;
 }
-.header__logo{
-  display: inline;
-  border: 1px solid #FFFFFF;
-  font-size: 4rem;
+.header__img{
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50%;
 }
 .nav__ul{
   display: flex;
@@ -322,8 +323,10 @@ main end
 
 /* responsibe start */
 @media only screen and (max-width: 1200px){
-  #header{
+  .header{
     background: rgba(0, 0, 0, .90);
+    min-height: 5vh;
+
   }
 }
 @media only screen and (max-width: 992px){
@@ -379,14 +382,22 @@ main end
   .header{
     flex-direction: column;
     position: relative;
+    align-items: flex-start;
+  }
+  .header__img{
+    margin-left: 100%;
+    height: 40px;
+    width: 40px;
+    margin: 0;
   }
   #menu-icon{
     display: block;
     font-size: 2.5rem;
-    margin: 1rem;
-    padding-left: 1rem;
+    padding-right: 2rem;
     position: absolute;
-    left: 0; 
+    right: 0; 
+    margin: 1rem;
+    transition: .5s linear;
   }
   .hidden{
     display: none;
@@ -396,7 +407,7 @@ main end
   .nav__ul{
     margin-top: 1rem;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .nav__link{
     margin-left: 0;
