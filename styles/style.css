@@ -23,6 +23,10 @@ body{
   margin: auto;
   box-shadow: .1rem .1rem .1rem #C4C4C4, -.1rem 0rem .1rem #C4C4C4;
 }
+p{
+  color: #5D5D5D;
+  line-height: 25px; 
+}
 .txt--j{
   text-align: justify;
 }
@@ -58,11 +62,9 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   background: rgba(0, 0, 0, 1);
   color: #FFFFFF;
-  padding: 2rem 1rem;
-  
+  padding: 2rem 5rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -84,10 +86,10 @@ body{
   display: flex;
 }
 .nav__link{
-  margin: 1rem;
-  padding: .5rem;
+  padding: 1.2rem 2rem;
   font-size: 1.8rem;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 .nav__link:hover{
   border-radius: 5px;
@@ -200,13 +202,14 @@ main start
   display: flex;
   margin: 1rem 0;
   transition: transform .4s;
-  box-shadow: .1rem .1rem .3rem #888888,
-              -.1rem 0 .3rem #888;
+  border-radius: 3px;
+  box-shadow: .1rem .1rem .5rem rgba(66, 68, 90, .2),
+              -.1rem 0 .5rem rgba(136, 136, 136, .2);
 }
 .blog__post:hover{
   transform: scale(1.1);
-  box-shadow: .1rem .1rem .5rem #888888,
-              -.1rem 0 .5rem #888;
+  box-shadow: .1rem .1rem 1.5rem rgba(136, 136, 136, .5),
+              -.1rem 0 1.5rem rgba(136, 136, 136, .5);
 }
 .blog__aside{
   flex: 1;
@@ -300,14 +303,20 @@ main end
 .footer{
   background: #000000;
   color: #FFFFFF;
-  padding: 1rem;
-  
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   font-size: 1.5rem;
   min-height: 5vh;
+}
+.footer__p{
+  color: #F2F2F2;
+  font-size: 12.8px
+}
+.footer span{
+  color: #6A77FF;
+  text-transform: uppercase;
 }
 .footer__icon{
   font-size: 3rem;
@@ -379,13 +388,13 @@ main end
   }
 }
 @media only screen and (max-width: 600px){
-   .header{
-    background: rgba(0, 0, 0, 1);
-  }
   .header{
     flex-direction: column;
     position: relative;
     align-items: flex-start;
+    background: rgba(0, 0, 0, 1);
+    padding: 2rem 1rem;
+
   }
   .header__logo{
     width: 40px;
@@ -462,5 +471,8 @@ main end
   }
   .nav2__li{
     margin: 1rem;
+  }
+  .footer{
+    padding: 10px;
   }
 }
